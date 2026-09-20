@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AleatoriedadeRouteImport } from './routes/aleatoriedade'
+import { Route as BacktestRouteImport } from './routes/backtest'
+import { Route as ConferidorRouteImport } from './routes/conferidor'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as EstruturaRouteImport } from './routes/estrutura'
+import { Route as FrequenciaRouteImport } from './routes/frequencia'
+import { Route as HeatmapRouteImport } from './routes/heatmap'
+import { Route as HistoricoRouteImport } from './routes/historico'
+import { Route as MetodoRouteImport } from './routes/metodo'
+import { Route as PadroesRouteImport } from './routes/padroes'
+import { Route as ParesRouteImport } from './routes/pares'
+import { Route as PoderRouteImport } from './routes/poder'
+import { Route as SimuladorRouteImport } from './routes/simulador'
+import { Route as TendenciasRouteImport } from './routes/tendencias'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AleatoriedadeRoute = AleatoriedadeRouteImport.update({
+  id: '/aleatoriedade',
+  path: '/aleatoriedade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BacktestRoute = BacktestRouteImport.update({
+  id: '/backtest',
+  path: '/backtest',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConferidorRoute = ConferidorRouteImport.update({
+  id: '/conferidor',
+  path: '/conferidor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstruturaRoute = EstruturaRouteImport.update({
+  id: '/estrutura',
+  path: '/estrutura',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrequenciaRoute = FrequenciaRouteImport.update({
+  id: '/frequencia',
+  path: '/frequencia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HeatmapRoute = HeatmapRouteImport.update({
+  id: '/heatmap',
+  path: '/heatmap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoricoRoute = HistoricoRouteImport.update({
+  id: '/historico',
+  path: '/historico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetodoRoute = MetodoRouteImport.update({
+  id: '/metodo',
+  path: '/metodo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PadroesRoute = PadroesRouteImport.update({
+  id: '/padroes',
+  path: '/padroes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParesRoute = ParesRouteImport.update({
+  id: '/pares',
+  path: '/pares',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoderRoute = PoderRouteImport.update({
+  id: '/poder',
+  path: '/poder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SimuladorRoute = SimuladorRouteImport.update({
+  id: '/simulador',
+  path: '/simulador',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TendenciasRoute = TendenciasRouteImport.update({
+  id: '/tendencias',
+  path: '/tendencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aleatoriedade': typeof AleatoriedadeRoute
+  '/backtest': typeof BacktestRoute
+  '/conferidor': typeof ConferidorRoute
+  '/dashboard': typeof DashboardRoute
+  '/estrutura': typeof EstruturaRoute
+  '/frequencia': typeof FrequenciaRoute
+  '/heatmap': typeof HeatmapRoute
+  '/historico': typeof HistoricoRoute
+  '/metodo': typeof MetodoRoute
+  '/padroes': typeof PadroesRoute
+  '/pares': typeof ParesRoute
+  '/poder': typeof PoderRoute
+  '/simulador': typeof SimuladorRoute
+  '/tendencias': typeof TendenciasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aleatoriedade': typeof AleatoriedadeRoute
+  '/backtest': typeof BacktestRoute
+  '/conferidor': typeof ConferidorRoute
+  '/dashboard': typeof DashboardRoute
+  '/estrutura': typeof EstruturaRoute
+  '/frequencia': typeof FrequenciaRoute
+  '/heatmap': typeof HeatmapRoute
+  '/historico': typeof HistoricoRoute
+  '/metodo': typeof MetodoRoute
+  '/padroes': typeof PadroesRoute
+  '/pares': typeof ParesRoute
+  '/poder': typeof PoderRoute
+  '/simulador': typeof SimuladorRoute
+  '/tendencias': typeof TendenciasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aleatoriedade': typeof AleatoriedadeRoute
+  '/backtest': typeof BacktestRoute
+  '/conferidor': typeof ConferidorRoute
+  '/dashboard': typeof DashboardRoute
+  '/estrutura': typeof EstruturaRoute
+  '/frequencia': typeof FrequenciaRoute
+  '/heatmap': typeof HeatmapRoute
+  '/historico': typeof HistoricoRoute
+  '/metodo': typeof MetodoRoute
+  '/padroes': typeof PadroesRoute
+  '/pares': typeof ParesRoute
+  '/poder': typeof PoderRoute
+  '/simulador': typeof SimuladorRoute
+  '/tendencias': typeof TendenciasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aleatoriedade'
+    | '/backtest'
+    | '/conferidor'
+    | '/dashboard'
+    | '/estrutura'
+    | '/frequencia'
+    | '/heatmap'
+    | '/historico'
+    | '/metodo'
+    | '/padroes'
+    | '/pares'
+    | '/poder'
+    | '/simulador'
+    | '/tendencias'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aleatoriedade'
+    | '/backtest'
+    | '/conferidor'
+    | '/dashboard'
+    | '/estrutura'
+    | '/frequencia'
+    | '/heatmap'
+    | '/historico'
+    | '/metodo'
+    | '/padroes'
+    | '/pares'
+    | '/poder'
+    | '/simulador'
+    | '/tendencias'
+  id:
+    | '__root__'
+    | '/'
+    | '/aleatoriedade'
+    | '/backtest'
+    | '/conferidor'
+    | '/dashboard'
+    | '/estrutura'
+    | '/frequencia'
+    | '/heatmap'
+    | '/historico'
+    | '/metodo'
+    | '/padroes'
+    | '/pares'
+    | '/poder'
+    | '/simulador'
+    | '/tendencias'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AleatoriedadeRoute: typeof AleatoriedadeRoute
+  BacktestRoute: typeof BacktestRoute
+  ConferidorRoute: typeof ConferidorRoute
+  DashboardRoute: typeof DashboardRoute
+  EstruturaRoute: typeof EstruturaRoute
+  FrequenciaRoute: typeof FrequenciaRoute
+  HeatmapRoute: typeof HeatmapRoute
+  HistoricoRoute: typeof HistoricoRoute
+  MetodoRoute: typeof MetodoRoute
+  PadroesRoute: typeof PadroesRoute
+  ParesRoute: typeof ParesRoute
+  PoderRoute: typeof PoderRoute
+  SimuladorRoute: typeof SimuladorRoute
+  TendenciasRoute: typeof TendenciasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +234,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aleatoriedade': {
+      id: '/aleatoriedade'
+      path: '/aleatoriedade'
+      fullPath: '/aleatoriedade'
+      preLoaderRoute: typeof AleatoriedadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/backtest': {
+      id: '/backtest'
+      path: '/backtest'
+      fullPath: '/backtest'
+      preLoaderRoute: typeof BacktestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conferidor': {
+      id: '/conferidor'
+      path: '/conferidor'
+      fullPath: '/conferidor'
+      preLoaderRoute: typeof ConferidorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estrutura': {
+      id: '/estrutura'
+      path: '/estrutura'
+      fullPath: '/estrutura'
+      preLoaderRoute: typeof EstruturaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/frequencia': {
+      id: '/frequencia'
+      path: '/frequencia'
+      fullPath: '/frequencia'
+      preLoaderRoute: typeof FrequenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/heatmap': {
+      id: '/heatmap'
+      path: '/heatmap'
+      fullPath: '/heatmap'
+      preLoaderRoute: typeof HeatmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/historico': {
+      id: '/historico'
+      path: '/historico'
+      fullPath: '/historico'
+      preLoaderRoute: typeof HistoricoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metodo': {
+      id: '/metodo'
+      path: '/metodo'
+      fullPath: '/metodo'
+      preLoaderRoute: typeof MetodoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/padroes': {
+      id: '/padroes'
+      path: '/padroes'
+      fullPath: '/padroes'
+      preLoaderRoute: typeof PadroesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pares': {
+      id: '/pares'
+      path: '/pares'
+      fullPath: '/pares'
+      preLoaderRoute: typeof ParesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/poder': {
+      id: '/poder'
+      path: '/poder'
+      fullPath: '/poder'
+      preLoaderRoute: typeof PoderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/simulador': {
+      id: '/simulador'
+      path: '/simulador'
+      fullPath: '/simulador'
+      preLoaderRoute: typeof SimuladorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tendencias': {
+      id: '/tendencias'
+      path: '/tendencias'
+      fullPath: '/tendencias'
+      preLoaderRoute: typeof TendenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AleatoriedadeRoute: AleatoriedadeRoute,
+  BacktestRoute: BacktestRoute,
+  ConferidorRoute: ConferidorRoute,
+  DashboardRoute: DashboardRoute,
+  EstruturaRoute: EstruturaRoute,
+  FrequenciaRoute: FrequenciaRoute,
+  HeatmapRoute: HeatmapRoute,
+  HistoricoRoute: HistoricoRoute,
+  MetodoRoute: MetodoRoute,
+  PadroesRoute: PadroesRoute,
+  ParesRoute: ParesRoute,
+  PoderRoute: PoderRoute,
+  SimuladorRoute: SimuladorRoute,
+  TendenciasRoute: TendenciasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
